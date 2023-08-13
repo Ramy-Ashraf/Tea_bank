@@ -1,0 +1,14 @@
+
+/* navbar and first row styles */
+.navbar {
+    /* font-family: 'Roboto Condensed', sans-serif; */
+    margin: none;
+    background: #ffffff;
+}
+
+.navbar.scrolled {
+    background-color: rgb(245, 245, 245);
+    transition: background 500ms;
+}
+
+/* end of navbar and first row styles */

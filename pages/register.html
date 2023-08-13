@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/TEA.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <script src="https://kit.fontawesome.com/90afc3c3da.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav id="mainNavbar" class="navbar navbar-expand-md sticky-top py-0">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/icons/TEA-removebg-preview.png" width="45" alt="TEA-COMP"
+                    class="d-inline-block align-middle mr-2">
+                TEA BANK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#Services">Services</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item"
+                                    href="https://www.teacomputers.com/Organization/Overview">Overview</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.teacomputers.com/Organization/Milestones">Milestones</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://www.teacomputers.com/Organization/Founders">Founders</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#pageTop" id="login">Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="account">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Support/support.html">Appointment</a></li>
+                            <li><a class="dropdown-item" href="Account/account.html">My Account</a></li>
+                            <li><a class="dropdown-item  d-none" href="./TEA-BANK.html" id="logout">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+
+    <div class="container1">
+        <div class="form-box">
+            <h1 id="title">Sign UP</h1>
+            <form id="form">
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign Up</button>
+                    <button type="button" id="signinBtn" class="disable">Sign In</button>
+                </div>
+                <div class="input-group1">
+                    <br>
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" id="username1">
+                        <span class="required-star">*</span>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field" id="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" placeholder="Email" id="email1">
+                        <span class="required-star">*</span>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field" id="Password">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password1">
+                        <span class="required-star">*</span>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field" id="confirmPass">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" id="password2">
+                        <span class="required-star">*</span>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field" id="Phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" placeholder="Phone" id="phone1">
+                        <span class="required-star">*</span>
+                        <div class="error"></div>
+                    </div>
+
+                    <p id="lostpass"></p>
+
+                    <div class="input-field" id="Address">
+                        <i class="fa-solid fa-map-marker"></i>
+                        <input type="text" placeholder="Address" id="address1">
+                        <span class="required-star">*</span>
+                        <div class="error"></div>
+                    </div>
+                    <br>
+                </div>
+                <button id="loginBtn" class="btn" type="submit">Done</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid" id="footer">
+        <footer>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 border-top">
+                <div class="col mb-3 footerContent">
+                    <a href="javascript:void(0)" class="d-flex align-items-center mb-3 px-3 text-decoration-none">
+                        <img src="../assets/icons/footerlogo.png" width="75" height="75" alt="" class="d-block">
+                    </a>
+                    <p class="px-3">Address: 7 El-Horeya, Almazah, Heliopolis, Cairo Governorate 4461110</p>
+                    <p class="px-3">Phone: 02-2290XXXX</p>
+
+                </div>
+                <div class="col mb-3">
+                    <!-- <h5 class="mb-3">Contact Us</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="javascript:void(0)" class="p-0 footerAction">Phone</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://mail.google.com/" class="p-0 footerAction">Email us</a>
+                        </li>
+                    </ul> -->
+                </div>
+
+                <div class="col mb-3">
+                    <h5 class="mb-3">Accounts</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="javascript:void(0)" class="p-0 footerAction">Invest</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="javascript:void(0)" class="p-0 footerAction">Deposit</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="javascript:void(0)" class="p-0 footerAction">Loan</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="mb-3">About TEA</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="https://www.teacomputers.com/Organization/Overview"
+                                class="p-0 footerAction">Overview</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://www.teacomputers.com/Organization/Milestones"
+                                class="p-0 footerAction">Milestones</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://www.teacomputers.com/Organization/Founders"
+                                class="p-0 footerAction">Founders</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="mb-3">Help & Support</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="javascript:void(0)" class="p-0 footerAction">Customer Service</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="javascript:void(0)" class="p-0 footerAction">FQA</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://www.gmail.com/" class="p-0 footerAction">Email us</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="https://www.google.com/" class="p-0 footerAction">Search</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+                <p>&copy; 20XX Company, Inc. All rights reserved.</p>
+                <p>All icons used in this page are from <a href="https://www.flaticon.com/authors/freepik"
+                        class="footerAction">Flaticon</a></p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-dark" href="https://www.facebook.com/TEAComputers/">
+                            <img src="../assets/icons/facebook.png" alt="">
+                        </a></li>
+                    <li class="ms-3"><a class="link-dark" href="https://www.linkedin.com/company/tea-computers/">
+                            <img src="../assets/icons/linkedin.png" alt="">
+                        </a></li>
+                </ul>
+            </div>
+        </footer>
+
+    <script src="../scripts/register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</body>
+
+</html>

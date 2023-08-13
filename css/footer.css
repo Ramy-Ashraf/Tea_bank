@@ -1,0 +1,14 @@
+#footer{
+    margin-bottom: 0;
+    background: #414346;
+    color: #f7f7f7;
+}
+.footerAction{
+    text-decoration: underline;
+    transition: all 0.5s ease-in-out;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+}
+.footerAction:hover {
+    color: rgb(172, 172, 172);
+}
