@@ -1,0 +1,261 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #ffffff;
+}
+
+/* #414346; */
+/* navbar and first row styles */
+#pageTop {
+    padding-top: none;
+}
+
+#quickSignIn {
+    text-align: center;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    text-align: left;
+}
+
+#email:focus,
+#password:focus,
+#search:focus {
+    outline: 0;
+    box-shadow: 0 0 0 3px #3b3b3b4d;
+    border-color: #3b3b3b4d;
+}
+
+.input-control.password {
+    position: relative;
+}
+
+.fa-eye,
+.fa-eye-slash {
+    position: absolute;
+    bottom: 16%;
+    left: 90%;
+}
+
+.fa-eye:hover,
+.fa-eye-slash:hover {
+    cursor: pointer;
+}
+
+#pageTopRightCol {
+    position: relative;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 100% 0 0 100%;
+    border: 0px none rgb(123, 123, 123);
+    background: rgba(247, 247, 247, 0.9);
+    font-size: 40px;
+    color: #414346;
+    padding-right: 5%;
+}
+
+.form-text.register {
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-text.register:hover {
+    text-decoration: underline;
+    color: rgb(39, 39, 39);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 25rem;
+    overflow: auto;
+}
+
+.card-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: none;
+    border-bottom: 1px solid #cacaca;
+}
+
+#welcome {
+    overflow: auto;
+    width: 25rem;
+    padding: 2rem;
+}
+
+.welcomeMsg {
+    font-size: 20px;
+}
+
+#pageTopRow {
+    background-image: url(../assets/icons/photo-1501167786227-4cba60f6d58f.jpg);
+    background-size: cover;
+    object-fit: fill;
+    height: 40rem;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.navbar.scrolled {
+    background-color: rgb(245, 245, 245);
+    transition: background 500ms;
+}
+
+.txt {
+    display: none;
+}
+
+@media (max-width:768px) {
+    .card {
+        display: none;
+    }
+
+    #pageTopRightCol {
+        display: none;
+    }
+
+    #pageTopRow {
+        background: rgba(247, 247, 247, 0.8);
+        height: 150px;
+    }
+
+    .txt {
+        display: inline-block;
+        font-size: 40px;
+        text-align: center;
+        color: #414346;
+    }
+}
+
+@media (max-width:660px) {
+    .txt {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:1000px) {
+    #pageTopRightCol {
+        font-size: 30px;
+    }
+}
+
+
+/* carousel styles */
+#Services {
+    background-color: #E0E0E0;
+}
+
+.offlineServiceRow,
+.onlineServiceRow {
+    display: flex;
+}
+
+.serviceColumn {
+    padding: 20px;
+    height: 320 !important;
+}
+
+.offlineService,
+.onlineService {
+    padding: 20px 75px 20px 75px;
+    text-align: center;
+    color: #414346;
+    font-size: 40px;
+    display: block;
+    border-bottom: 1px solid #cacaca;
+}
+
+.serviceImage {
+    display: inline-block;
+    margin: none;
+    height: 100px;
+    width: 100px;
+
+}
+.serviceImageLink,
+.serviceImageLinkOffline {
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #414346;
+}
+
+.serviceImageTitle {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.serviceImageSubText {
+    font-size: 20px;
+}
+.owl-carousel {
+    /* Adjust the maximum width to resize the carousel */
+    margin: 0 auto;
+    /* Center the carousel horizontally */
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.item img{
+    margin-right:none !important ;
+    height: 128px;
+    width: 128px !important;
+}
+.owl-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    height: 420px !important;
+    transition: all 200ms ease-in;
+    /* Adjust the margin to set the spacing between items */
+}
+.owl-item:hover {
+    border-color: #000000;
+    border-width: 3px;
+    background-color: #f7f7f7;
+}
+.owl-prev,
+.owl-next {
+    font-size: 100px;
+    /* Adjust the font size to change the arrow size */
+}
+
+.owl-prev {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.owl-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.owl-item {
+    position: relative;
+}
+.fa-building-columns{
+    position:absolute;
+    transform: translate(500%,-180%) !important;
+    
+}
