@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="images/TEA.png">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/TEA.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -77,54 +77,44 @@
 
     <!-- first row end -->
     <section class="container-fluid" id="pageTop">
-        <div class="row align-items-center" id="pageTopRow">
-            <span class="txt">Simplify your banking, simplify your life.<br><a href="Login/login.html"
-                    class="btn btn-outline-dark mt-2">Get Started</a></span>
-            <div class="col-md-6 d-flex justify-content-center" id="pageTopLeftCol">
-                <div class="card" id="quickSignIn">
-                    <div class="card-body">
-                        <!-- TO BE REMOVED AND REPLACED -->
-                        <!-- REPLACE FORM ONLY OR CONSULT ALI BEFORE DOING ANYTHING -->
-                        <h5 class="card-title h3">Hello!</h5>
-                        <p class="card-text">Please Log In to fully use our services</p>
-                        <form class="login" action="" method="post">
-                            <div class="input-control">
-                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                                <input type="text" class="form-control mb-2" id="email" placeholder="name@example.com">
-                                <div class="error form-text mb-1"></div>
-                            </div>
-                            <div class="input-control password">
-                                <label for="inputPassword5" class="form-label">Password</label>
-                                <input type="password" id="password" class="form-control mb-0"
-                                    aria-describedby="passwordHelpBlock mb-0" placeholder="password">
-                                <i class="fa fa-eye" id="showPassword"></i>
-                                <div class="error form-text"></div>
-                            </div>
-                            <button class="btn btn-outline-dark mt-2" type="submit">Log In</button>
-                        </form>
-                        <a href="Register/register.html" class="form-text register">Don't have an account? Register
-                            Now!</a>
+        <div class="row row-cols-1 row-cols-md-2 align-items-center" id="pageTopRow">
+            <div class="col-md-6 d-flex justify-content-center order-2 order-md-1" id="pageTopLeftCol">
+                <!-- TO BE REMOVED AND REPLACED -->
+                <!-- REPLACE FORM ONLY OR CONSULT ALI BEFORE DOING ANYTHING -->
+                <div class="owl-carousel carousel1">
+                    <div class="item single-services">
+                        <div class="social"><i class="fa-solid fa-user"></i></div>
+                        <span></span>
+                        <h2>Personal Banking</h3>
+                        <p>Banking is about more than just products with TeaB, it's an experience.</p>
                     </div>
-                </div>
-                <div class="card d-none align-items-center" id="welcome">
-                    <div class="card-body">
-                        <h5 class="card-title h3 mb-3"></h5>
-                        <p class="welcomeMsg">Welcome back to TEA Bank! We're glad to have you here. Explore our range
-                            of banking services and manage your finances with ease. If you need any assistance, our team
-                            is ready to help. Thank you for choosing TEA Bank!</p>
+                    <div class="item single-services">
+                        <div class="social"><i class="fa-solid fa-building-columns"></i></div>
+                        <span></span>
+                        <h3>Institutional Banking</h3>
+                        <p>Join the ranks of the biggest companies and institutions.</p>
                     </div>
+                    <div class="item single-services">
+                        <div class="social"><i class="fa-solid fa-briefcase"></i></div>
+                        <span></span>
+                        <h3>Business Banking</h3>
+                        <p>Your vision and our expertise will grow your business.</p>
+                    </div>
+                    <!-- Add more items here -->
                 </div>
             </div>
-            <div class="col-md-6 justify-content-center text-center" id="pageTopRightCol">
+            <div class="col-md-6 justify-content-center text-center order-1 order-md-2" id="pageTopRightCol">
                 Simplify your banking, simplify your life.
             </div>
+            <!-- PART TO BE REMOVED END -->
         </div>
+
     </section>
 
     <section class="container-fluid" id="Services">
         <span class="offlineService">Services</span>
         <div class="row text-center justify-content-evenly offlineServiceRow carouselContainer">
-            <div class="owl-carousel">
+            <div class="owl-carousel carousel2">
                 <div class="serviceColumn item">
                     <a href="javascript:void(0)" class="serviceImageLink">
                         <div class="img"><img src="../assets/icons/paid-search.png" alt=""></div>

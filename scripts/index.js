@@ -85,16 +85,16 @@ $(function () {
   // validation end
   
   // password encryption
-  showPassword.addEventListener('click', function (e) {
-    this.classList.toggle("fa-eye");
-    this.classList.toggle('fa-eye-slash');
-    if (password.getAttribute('type') === 'password') {
-      password.setAttribute('type', 'text');
-    }
-    else {
-      password.setAttribute('type', 'password');
-    }
-  })
+//   showPassword.addEventListener('click', function (e) {
+//     this.classList.toggle("fa-eye");
+//     this.classList.toggle('fa-eye-slash');
+//     if (password.getAttribute('type') === 'password') {
+//       password.setAttribute('type', 'text');
+//     }
+//     else {
+//       password.setAttribute('type', 'password');
+//     }
+//   })
   
   // password encryption end
   
@@ -121,16 +121,24 @@ $(function () {
   logout.addEventListener('click', function (e) {
     localStorage.clear();
   })
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    validateInputs();
-  })
+//   form.addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     e.stopImmediatePropagation();
+//     validateInputs();
+//   })
   
   
   // carousel script
   $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
+    $('.carousel1').owlCarousel({
+        items: 1,
+        loop: true,
+        nav: true,
+        autoplay: true, // Enable auto-switching
+        autoplayTimeout: 3000, // Set the auto-switching interval (in milliseconds)
+        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
+      });
+    $('.carousel2').owlCarousel({
       items: 1,
       loop: true,
       nav: true, // Enable navigation arrows
@@ -150,4 +158,5 @@ $(function () {
       }
     });
   });
+
   
