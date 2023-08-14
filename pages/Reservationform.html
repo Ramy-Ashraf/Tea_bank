@@ -88,38 +88,38 @@
     <div class="container-fluid d-flex justify-content-center align-items-center pt-5 pb-5" id="pageMiddle">
         <div class="form-box">
             <h1 id="title">Reserve Appointment</h1>
-            <form id="form">
+            <form id="myform">
                 <div class="btn-field">
                     <!-- <button type="button" id="signupBtn">Sign Up</button>
                     <button type="button" id="signinBtn" class="disable">Sign In</button> -->
                 </div>
                 <div class="h3"> Select a service </div>
-                <div class="checkBoxService">
-                    <input id="a" class="form-check-input" type="checkbox" value="" id="loan">
+                <div id="check" class="checkBoxService" name="number[]" required>
+                    <input id="a" class="form-check-input" type="checkbox" value="Apply for a loan"  id="loan">
                     <label class="form-check-label" for="loan">
                         Apply for a loan
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="b" class="form-check-input" type="checkbox" value="" id="safeDeposit">
+                    <input id="b" class="form-check-input" type="checkbox" value="Get a Safe Deposit Box"  id="safeDeposit">
                     <label class="form-check-label" for="safeDeposit">
                         Get a Safe Deposit Box
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="c" class="form-check-input" type="checkbox" value="" id="deposit">
+                    <input id="c" class="form-check-input" type="checkbox" value="Deposit cash"  id="deposit">
                     <label class="form-check-label" for="deposit">
                         Deposit cash
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="d" class="form-check-input" type="checkbox" value="" id="invest">
+                    <input id="d" class="form-check-input" type="checkbox" value=" Investment and Retirement"  id="invest">
                     <label class="form-check-label" for="invest">
                         Investment and Retirement
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="e" class="form-check-input" type="checkbox" value="" id="other">
+                    <input id="e" class="form-check-input" type="checkbox" value="Other"  id="other">
                     <label class="form-check-label" for="other">
                         Other
                     </label>
@@ -138,7 +138,6 @@
                         <option>October City</option>
                       </select>
                       <br>
-                   
                     </form>
 
                       <div class="container mt-3">
@@ -164,12 +163,13 @@ serviceDate.min = new Date().toISOString().split("T")[0];
                             <option>11:30-12:30</option>
                           </select>
                           <br>
-                         
+                        </div>
                         </form>
+                     
 
                     <p id="lostpass"></p>
                 <button id="loginBtn" class="btn" type="submit" >Done</button>
-                
+                     
             </form>
         </div>
     </div>
@@ -177,9 +177,32 @@ serviceDate.min = new Date().toISOString().split("T")[0];
     </div>
 
 <script>
-    function validate(){
+    $.validator.addMethod( "at_least_one", function() {
+    return $( "input[name='number[]']:checked" ).length;
+}, 'Select at least one number' );
 
+
+$('#myform').validate({
+    rules: {
+        check:{
+            required: true
+        },
+    
+        'number[]': {
+      required: true,
+      minlength: 1
+        }
+    },
+
+    messages: {
+        'number[]': {
+      required: "Please check at least 1 option.",
+      minlength: "Please check at least {0} option."
+        }
     }
+})
+
+
 </script>
     <!-- footer -->
     <div class="container-fluid" id="footer">
