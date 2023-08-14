@@ -496,7 +496,7 @@ body {
 .contactform .inputBox input:valid~span,
 .contactform .inputBox textarea:focus~span,
 .contactform .inputBox textarea:valid~span {
-    color: #1af121;
+    color: #3c3d48;
     font-size: 12px;
     transform: translateY(-20px);
 }
