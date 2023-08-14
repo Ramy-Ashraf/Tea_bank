@@ -140,11 +140,8 @@ if (localStorage.getItem('isLoggedIn') === 'true') {
   logout.classList.toggle('d-none');
   account.classList.toggle('d-none');
   card.classList.toggle('d-none');
-  cardWelcome.classList.toggle('d-none')
   infoArray = JSON.parse(localStorage.getItem('user'));
   const welcomeMsg = 'Welcome back, ' + infoArray[0] + '!';
-  cardWelcome.querySelector('.card-title').innerText = welcomeMsg;
-  smallSizeTxt.innerText = welcomeMsg;
   for (link of serviceImageLinkOfflineArray) {
   }
 } else {
