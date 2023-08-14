@@ -5,17 +5,19 @@ const signupBtn = document.getElementById("signupBtn");
 const signinBtn = document.getElementById("signinBtn");
 const loginBtn = document.getElementById("loginBtn");
 
-const nameField = document.getElementById("username1");
+const fnameField = document.getElementById("firstname1");
+const lnameField = document.getElementById("lastname1");
 const emailField = document.getElementById("email1");
 const passField = document.getElementById("password1");
 const confirmPass = document.getElementById("password2");
-const phonevalue = document.getElementById("phone1");
-const addressvalue = document.getElementById("address1");
+const idvalue = document.getElementById("idnumber1");
 
+const fnamebox = document.getElementById("fnameField");
+const lnamebox = document.getElementById("lnameField");
 const emailbox = document.getElementById("Email");
+const idbox = document.getElementById("idnumber");
+const passbox = document.getElementById("Password");
 const passbox2 = document.getElementById("confirmPass");
-const phonebox = document.getElementById("Phone");
-const addressbox = document.getElementById("Address");
 
 const lostpass = document.getElementById("lostpass");
 let toggle = 0;
@@ -45,11 +47,11 @@ const isValidEmail = email => {
 }
 
 signupBtn.onclick = function () {
-    emailbox.style.maxHeight = "60px";
     title.innerHTML = "Sign Up";
+    fnamebox.style.maxHeight = "60px";
+    lnamebox.style.maxHeight = "60px";
     passbox2.style.maxHeight = "60px";
-    phonebox.style.maxHeight = "60px";
-    addressbox.style.maxHeight = "60px";
+    idbox.style.maxHeight = "60px";
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
     loginBtn.innerHTML = "Done";
@@ -58,20 +60,22 @@ signupBtn.onclick = function () {
 }
 
 signinBtn.onclick = function () {
-    emailbox.style.maxHeight = "0";
+    fnamebox.style.maxHeight = "0";
+    lnamebox.style.maxHeight = "0";
     title.innerHTML = "Sign In";
     passbox2.style.maxHeight = "0";
-    phonebox.style.maxHeight = "0";
-    addressbox.style.maxHeight = "0";
+    idbox.style.maxHeight = "0";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
     loginBtn.innerHTML = "Login In";
     toggle = 1;
     lostpass.innerHTML = "Forgot Password? <a href='#'>Click Here</a>";
+    fnameField.value = "";
+    lnameField.value = "";
     emailField.value = "";
+    idvalue.value = "";
     confirmPass.value = "";
     passField.value = "";
-    addressbox.value = "";
 }
 
 form.addEventListener("submit", e => {
@@ -79,44 +83,69 @@ form.addEventListener("submit", e => {
     validateInputs();
 
     if (toggle == 0) {
-        if (nameField.parentElement.classList.contains("success") && emailField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success") && confirmPass.parentElement.classList.contains("success")) {
+        if (fnameField.parentElement.classList.contains("success") && emailField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success") && confirmPass.parentElement.classList.contains("success")) {
             islogin = true;
-            localStorage.setItem("name", nameField.value);
+            localStorage.setItem("firstname", fnameField.value);
             localStorage.setItem("islogin", islogin);
             window.location.href = "Home.html";
         }
     } else {
-        if (nameField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success")) {
+        if (fnameField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success")) {
             islogin = true;
-            localStorage.setItem("name", nameField.value);
+            localStorage.setItem("firstname", fnameField.value);
             localStorage.setItem("islogin", islogin);
             window.location.href = "Home.html";
         }
-    }   
+    }
+
+    if (toggle == 0) {
+        if (lnameField.parentElement.classList.contains("success") && emailField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success") && confirmPass.parentElement.classList.contains("success")) {
+            islogin = true;
+            localStorage.setItem("lastname", lnameField.value);
+            localStorage.setItem("islogin", islogin);
+            window.location.href = "Home.html";
+        }
+    } else {
+        if (lnameField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success")) {
+            islogin = true;
+            localStorage.setItem("lastname", lnameField.value);
+            localStorage.setItem("islogin", islogin);
+            window.location.href = "Home.html";
+        }
+    }
 
 });
 
 const validateInputs = () => {
 
-    const nameValue = nameField.value.trim();
+    const fnameValue = fnameField.value.trim();
+    const lnameValue = lnameField.value.trim();
     const emailValue = emailField.value.trim();
+    const idValue = idvalue.value.trim();
     const passValue = passField.value.trim();
     const confirmPassValue = confirmPass.value.trim();
 
-    if (nameValue === "") {
-        setError(nameField, "Name cannot be blank");
-    } else {
-        setSuccess(nameField);
+    if (toggle == 0) {
+        if (fnameValue === "") {
+            setError(fnameField, "Name cannot be blank");
+        } else {
+            setSuccess(fnameField);
+        }
+    }
+    if (toggle == 0) {
+        if (lnameValue === "") {
+            setError(lnameField, "Name cannot be blank");
+        } else {
+            setSuccess(lnameField);
+        }
     }
 
-    if(toggle == 0){
-        if (emailValue === "") {
-            setError(emailField, "Email cannot be blank");
-        } else if (!isValidEmail(emailValue)) {
-            setError(emailField, "Email is not valid");
-        } else {
-            setSuccess(emailField);
-        }
+    if (emailValue === "") {
+        setError(emailField, "Email cannot be blank");
+    } else if (!isValidEmail(emailValue)) {
+        setError(emailField, "Email is not valid");
+    } else {
+        setSuccess(emailField);
     }
 
     if (passValue === "") {
@@ -128,7 +157,7 @@ const validateInputs = () => {
         setSuccess(passField);
     }
 
-    if (toggle == 0){
+    if (toggle == 0) {
         if (confirmPassValue === "") {
             setError(confirmPass, "Confirm Password cannot be blank");
         } else if (passValue !== confirmPassValue) {
@@ -137,22 +166,15 @@ const validateInputs = () => {
             setSuccess(confirmPass);
         }
     }
-    if (toggle == 0){
-        if (phonevalue.value === "") {
-            setError(phonevalue, "Phone cannot be blank");
+    if (toggle == 0) {
+        if (idvalue.value === "") {
+            setError(idvalue, "id cannot be blank");
         }
-        else if (isNaN(phonevalue.value)) {
-            setError(phonevalue, "Phone must be a number");
+        else if (isNaN(idvalue.value)) {
+            setError(idvalue, "id must be a number");
         }
         else {
-            setSuccess(phonevalue);
-        }
-    }
-    if (toggle == 0){
-        if (addressvalue.value === "") {
-            setError(addressvalue, "Address cannot be blank");
-        } else {
-            setSuccess(addressvalue);
+            setSuccess(idvalue);
         }
     }
 }

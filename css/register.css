@@ -27,6 +27,7 @@
 }
 
 .form-box h1 {
+    color: #ffffff;
     font-size: 30px;
     margin-bottom: 35px;
     position: relative;
@@ -46,7 +47,7 @@
 
 .input-field {
 
-    border: 1px solid #a9cae7;
+    /* border: 1px solid #a9cae7; */
     background: #ffffff;
     margin: 15px 0;
     border-radius: 3px;
