@@ -95,31 +95,31 @@
                 </div>
                 <div class="h3"> Select a service </div>
                 <div class="checkBoxService">
-                    <input class="form-check-input" type="checkbox" value="" id="loan">
+                    <input id="a" class="form-check-input" type="checkbox" value="" id="loan">
                     <label class="form-check-label" for="loan">
                         Apply for a loan
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input class="form-check-input" type="checkbox" value="" id="safeDeposit">
+                    <input id="b" class="form-check-input" type="checkbox" value="" id="safeDeposit">
                     <label class="form-check-label" for="safeDeposit">
                         Get a Safe Deposit Box
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input class="form-check-input" type="checkbox" value="" id="deposit">
+                    <input id="c" class="form-check-input" type="checkbox" value="" id="deposit">
                     <label class="form-check-label" for="deposit">
                         Deposit cash
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input class="form-check-input" type="checkbox" value="" id="invest">
+                    <input id="d" class="form-check-input" type="checkbox" value="" id="invest">
                     <label class="form-check-label" for="invest">
                         Investment and Retirement
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input class="form-check-input" type="checkbox" value="" id="other">
+                    <input id="e" class="form-check-input" type="checkbox" value="" id="other">
                     <label class="form-check-label" for="other">
                         Other
                     </label>
@@ -131,18 +131,25 @@
                         Bootstrap 5, add the .form-select class to the select element:</p> -->
                     <form action="/action_page.php">
                       <label for="sel1" class="form-label">Please select a branch</label>
-                      <select class="form-select" id="sel1" name="sellist1">
+                      <select class="form-select" id="sel1" name="sellist1" required>
+                        <option value="" selected>Select a branch</option>
                         <option>Nasr City</option>
                         <option>Fifth settlement</option>
                         <option>October City</option>
                       </select>
                       <br>
+                   
+                    </form>
 
                       <div class="container mt-3">
                         <h2>Date</h2>
                   <label for="serviceDate">Select a date:</label>
-<input type="date" id="serviceDate" name="serviceDate" min="">
+<input type="date" id="serviceDate" name="serviceDate"  required>
 </div>
+
+<script>
+serviceDate.min = new Date().toISOString().split("T")[0];
+</script>
 
                       <div class="container mt-3">
                         <h2>Timeslot</h2>
@@ -150,17 +157,18 @@
                             Bootstrap 5, add the .form-select class to the select element:</p> -->
                         <form action="/action_page.php">
                           <label for="sel1" class="form-label">Please select a timeslot</label>
-                          <select class="form-select" id="sel1" name="sellist1">
+                          <select class="form-select" id="sel1" name="sellist1" required>
+                            <option value="" selected>Select a Timeslot</option>
                             <option>9:30-10:30</option>
                             <option>10:30-11:30</option>
                             <option>11:30-12:30</option>
                           </select>
                           <br>
-
-                          
+                         
+                        </form>
 
                     <p id="lostpass"></p>
-                <button id="loginBtn" class="btn" type="submit">Done</button>
+                <button id="loginBtn" class="btn" type="submit" >Done</button>
                 
             </form>
         </div>
@@ -168,7 +176,11 @@
         </div>
     </div>
 
+<script>
+    function validate(){
 
+    }
+</script>
     <!-- footer -->
     <div class="container-fluid" id="footer">
         <footer>
