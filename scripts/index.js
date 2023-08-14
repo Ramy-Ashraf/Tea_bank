@@ -1,4 +1,10 @@
-
+///////////////////////////////////////////////////////////////////////////////
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $("#mainNavbar");
+    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+  });
+})
 
 // const sessionTimeoutDuration = 10000;
 // const cardDisplayDelay = 10000;
@@ -36,13 +42,7 @@
 //         document.addEventListener("touchstart", resetSessionTimer);
 //     }
 // };
-///////////////////////////////////////////////////////////////////////////////
-$(function () {
-  $(document).scroll(function () {
-    var $nav = $("#mainNavbar");
-    $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-  });
-})
+
 
 /////////////////////////////////////////////////////////////////////////////////
 const form = document.querySelector('form.login');
