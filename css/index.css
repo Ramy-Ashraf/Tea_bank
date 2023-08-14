@@ -214,6 +214,14 @@ body {
     font-size: 30px;
     transition: 0.5s;
 }
+@media(max-width:915px){
+    .single-services h3 {
+        font-size: 24px;
+    }
+    .single-services p{
+        font-size: 20px;
+    }
+}
 
 .single-services span {
     position: absolute;
