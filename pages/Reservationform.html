@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/reserve.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/x-icon" href="../assets/icons/TEA.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -24,6 +26,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/Reservationform.css">
     <script src="https://kit.fontawesome.com/90afc3c3da.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -121,57 +124,40 @@
                         Other
                     </label>
                 </div>
-                
-                    <div class="dropdown">
-                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          Branch
-                        </button>
-                            <select id="services" name="services">
-                              <option value="account">Account Balance</option>
-                              <option value="transfer">Funds Transfer</option>
-                              <option value="payments">Bill Payments</option>
-                            </select>
-                      
-                      </div>
 
-                      <div class="dropdown">
-                        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          Timeslot
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                          <li><a class="dropdown-item" href="#">9:30-10:30</a></li>
-                          <li><a class="dropdown-item" href="#">10:30-11:30</a></li>
-                          <li><a class="dropdown-item" href="#">11:30-12:30</a></li>
-                        </ul>
-                      </div>
+                <div class="container mt-3">
+                    <h2>Branch</h2>
+                    <!-- <p>To style a select menu in 
+                        Bootstrap 5, add the .form-select class to the select element:</p> -->
+                    <form action="/action_page.php">
+                      <label for="sel1" class="form-label">Please select a branch</label>
+                      <select class="form-select" id="sel1" name="sellist1">
+                        <option>Nasr City</option>
+                        <option>Fifth settlement</option>
+                        <option>October City</option>
+                      </select>
+                      <br>
 
-                    <div class="input-field" id="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="Email" id="email1">
-                        <span class="required-star">*</span>
-                        <div class="error"></div>
-                    </div>
+                      <div class="container mt-3">
+                        <h2>Date</h2>
+                  <label for="serviceDate">Select a date:</label>
+<input type="date" id="serviceDate" name="serviceDate" min="">
+</div>
 
-                    <div class="input-field" id="idnumber">
-                        <i class="fa-solid fa-id-card"></i>
-                        <input type="text" placeholder="ID Number" id="idnumber1">
-                        <span class="required-star">*</span>
-                        <div class="error"></div>
-                    </div>
+                      <div class="container mt-3">
+                        <h2>Timeslot</h2>
+                        <!-- <p>To style a select menu in 
+                            Bootstrap 5, add the .form-select class to the select element:</p> -->
+                        <form action="/action_page.php">
+                          <label for="sel1" class="form-label">Please select a timeslot</label>
+                          <select class="form-select" id="sel1" name="sellist1">
+                            <option>9:30-10:30</option>
+                            <option>10:30-11:30</option>
+                            <option>11:30-12:30</option>
+                          </select>
+                          <br>
 
-                    <div class="input-field" id="Password">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Password" id="password1">
-                        <span class="required-star">*</span>
-                        <div class="error"></div>
-                    </div>
-
-                    <div class="input-field" id="confirmPass">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Confirm Password" id="password2">
-                        <span class="required-star">*</span>
-                        <div class="error"></div>
-                    </div>
+                          
 
                     <p id="lostpass"></p>
                 <button id="loginBtn" class="btn" type="submit">Done</button>
