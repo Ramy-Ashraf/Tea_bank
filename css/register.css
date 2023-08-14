@@ -138,44 +138,4 @@ form p a {
     height: 13px;
 }
 
-/* added by malak lel form w msh shaghal */
-.form-check-input {
-    width: 2px;
-    height: 2px;
-    margin-right: 8px;
-}
-/* Style the dropdown button */
-.dropdown .btn {
-background-color: #fff;
-color: #000;
-border: 1px solid #f8f5f5;
-border-radius: 4px;
-padding: 10px;
-font-size: 16px;
-}
-
-/* Style the dropdown menu */
-.dropdown-menu {
-background-color: #fff;
-border: 1px solid #f7f6f6;
-border-radius: 4px;
-padding: 0;
-}
-
-/* Style the dropdown menu items */
-.dropdown-menu .dropdown-item {
-padding: 10px;
-font-size: 16px;
-color: #000;
-}
-
-/* Style the dropdown menu items on hover */
-.dropdown-menu .dropdown-item:hover {
-background-color: #fffbfb;
-}
-
-/* Style the active dropdown menu item */
-.dropdown-menu .dropdown-item.active {
-background-color: #007bff;
-color: #fff;
-}
+/*  */
