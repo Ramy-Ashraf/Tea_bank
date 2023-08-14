@@ -6,42 +6,42 @@ $(function () {
   });
 })
 
-// const sessionTimeoutDuration = 10000;
-// const cardDisplayDelay = 10000;
+const sessionTimeoutDuration = 300000;
+const cardDisplayDelay = 300000;
 
-// let sessionTimeout;
-// let cardTimeout;
+let sessionTimeout;
+let cardTimeout;
 
-// function startSessionTimer() {
-//     sessionTimeout = setTimeout(showSessionTimeoutCard, sessionTimeoutDuration);
-// }
+function startSessionTimer() {
+    sessionTimeout = setTimeout(showSessionTimeoutCard, sessionTimeoutDuration);
+}
 
-// function resetSessionTimer() {
-//     clearTimeout(sessionTimeout);
-//     clearTimeout(cardTimeout);
-//     startSessionTimer();
-//     cardTimeout = setTimeout(showSessionTimeoutCard, cardDisplayDelay);
-// }
+function resetSessionTimer() {
+    clearTimeout(sessionTimeout);
+    clearTimeout(cardTimeout);
+    startSessionTimer();
+    cardTimeout = setTimeout(showSessionTimeoutCard, cardDisplayDelay);
+}
 
-// function showSessionTimeoutCard() {
-//     const card = document.getElementById("sessionTimeoutCard");
-//     card.style.display = "block";
-// }
+function showSessionTimeoutCard() {
+    const card = document.getElementById("sessionTimeoutCard");
+    card.style.display = "block";
+}
 
 // function logout() {
 //     // logout logic
 // }
 
-// window.onload = function () {
-//     if (localStorage.getItem('islogin') === 'true') {
-//         startSessionTimer();
-//         cardTimeout = setTimeout(showSessionTimeoutCard, cardDisplayDelay);
-//         document.addEventListener("mousemove", resetSessionTimer);
-//         document.addEventListener("mousedown", resetSessionTimer);
-//         document.addEventListener("keypress", resetSessionTimer);
-//         document.addEventListener("touchstart", resetSessionTimer);
-//     }
-// };
+window.onload = function () {
+    if (localStorage.getItem('islogin') === 'true') {
+        startSessionTimer();
+        cardTimeout = setTimeout(showSessionTimeoutCard, cardDisplayDelay);
+        document.addEventListener("mousemove", resetSessionTimer);
+        document.addEventListener("mousedown", resetSessionTimer);
+        document.addEventListener("keypress", resetSessionTimer);
+        document.addEventListener("touchstart", resetSessionTimer);
+    }
+};
 
 
 /////////////////////////////////////////////////////////////////////////////////
