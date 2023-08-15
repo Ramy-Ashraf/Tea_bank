@@ -10,5 +10,8 @@
     background-color: rgb(245, 245, 245);
     transition: background 500ms;
 }
+.nav-item:last-of-type{
+    margin-right: 10px;
+}
 
 /* end of navbar and first row styles */

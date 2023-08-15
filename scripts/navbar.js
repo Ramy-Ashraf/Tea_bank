@@ -25,6 +25,7 @@ if (isLogin === 'true' && firstname) {
         <ul class="dropdown-menu">
             <li><a class="dropdown-item"
                     href="profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="../pages/Reservationform.html" id="appointment">Appointment</a></li>
             <li><a class="dropdown-item" id="logoutBtn">Log Out</a></li>
         </ul>
     </li>`
