@@ -84,15 +84,37 @@
     </nav>
     <!-- navbar end -->
 
+<!-- confirm popup -->
+    <div id="popupCard2" class="card" style="display: none;">
+        <h2 class="card-title" id="attention" style="color: crimson;">
+            Attention
+          </h2>
+          <h5>Estimated wait time = 40min</h5>
+        <div class="card-body">
+           
+        <p>3 other clients have reserved the same date and timeslot as you</p>
+        <br>  <p> Do you still want to confirm your reservation?
+        </p>
+    </div>
+    <div class="card-content">
+<button onclick="confirm()" id="confirm">Confirm</button>
+      </div>
+    </div>
+
+    <!-- Reservation popup -->
     <div id="popupCard" class="card" style="display: none;">
-        <div class="card-content">
-        <h1>Pop-up Card</h1>
-        <p>This is a pop-up card.</p>
-        
-<button id="Reschedule">Reschedule</button>
-<button id="confirm" >Confirm</button>
+        <h5 class="card-title">Reservation details</h5>
+        <details>
+        <div class="card-body">
+        <p id="hcard">This is a pop-up card.</p>
+    </div>
+    <div class="card-content">
+<button href="Reservationform.html" id="Reschedule" >Reschedule</button>
+<br>
+<button onclick="confirm()" id="confirm">Confirm</button>
+      
       </div>
-      </div>
+    </div>
 
     <div class="container-fluid d-flex justify-content-center align-items-center pt-5 pb-5" id="pageMiddle">
         <div class="form-box">
@@ -183,11 +205,7 @@ serviceDate.min = new Date().toISOString().split("T")[0];
 
                 <div class="display-area" id="displayArea">
                     
-                  </div>    
-
-                 
-
-                
+                  </div>  
             </form>     
             </form>     
            
@@ -197,6 +215,17 @@ serviceDate.min = new Date().toISOString().split("T")[0];
     </div>
 
 <script>
+
+    $(document).ready(function(){
+    var Att= document.getElementById("attention")
+$(Att).toggle(function(){
+  $(this).animate({fontSize: '40px'}, "slow")
+})
+$(Att).toggle(function(){
+  $(this).animate({fontSize: '25px'}, "slow")
+});
+  })
+
     document.getElementById("myform").addEventListener("submit", function(event) {
     var checkboxes = document.querySelectorAll(".form-check-input");
     var checkboxError = document.getElementById("checkboxError");
@@ -218,6 +247,11 @@ serviceDate.min = new Date().toISOString().split("T")[0];
         show();
     }
 });
+
+function confirm(){
+        document.getElementById("popupCard").style.display = "none";
+        document.getElementById("popupCard2").style.display = "block";
+    }
 
 function show(){
     const s=[]
@@ -254,13 +288,13 @@ function show(){
 
     window.sessionStorage.setItem("log",JSON.stringify(log)); 
 
+   
     
-    popupCard.innerHTML = "Reservation details:  " +"<br>" + "Your reservation handles the services: "+ s +
+document.getElementById("hcard").innerHTML = "Your reservation handles the services: "+ s +
    "<br>"+"Date: "+ date +"<br>"+"Timeslot: "+ time +"<br>"+ "Branch: " + branch
    document.getElementById("popupCard").style.display = "block";
    event.preventDefault();
-}
-   
+}  
 
 </script>
     <!-- footer -->
