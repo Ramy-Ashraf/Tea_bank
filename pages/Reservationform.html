@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../css/register.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/reserve.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/timeout.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/x-icon" href="../assets/icons/TEA.png">
@@ -32,6 +34,13 @@
 
 <body>
 
+    <div id="sessionTimeoutCard" class="card_timeoutCard">
+        <div class="card-content">
+            <h2>Your session has expired</h2>
+            <p>Please log in again to continue.</p>
+            <button id="logoutButton" onclick="logout()">Logout</button>
+        </div>
+    </div>
     <!-- navbar start -->
     <nav id="mainNavbar" class="navbar navbar-expand-md sticky-top py-0">
         <div class="container-fluid">
@@ -46,30 +55,35 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../pages/index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#Services">Services</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#Contact">Contact</a>
+                    </li>
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#About" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             About
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Overview">Overview</a></li>
+                                    href="#About">Overview</a></li>
                             <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Milestones">Milestones</a></li>
+                                    href="https://www.teacomputers.com/Organization/Milestones" target="_blank">Milestones</a></li>
                             <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Founders">Founders</a></li>
+                                    href="https://www.teacomputers.com/Organization/Founders" target="_blank">Founders</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#pageTop" id="login">Login</a>
+                    <li class="nav-item" id="loginStatus">
+                        <a class="nav-link" aria-current="page" href="../pages/register.html" id="login">Login</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link d-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="account">Account</a>
                         <ul class="dropdown-menu">
@@ -77,7 +91,7 @@
                             <li><a class="dropdown-item" href="Account/account.html">My Account</a></li>
                             <li><a class="dropdown-item  d-none" href="./TEA-BANK.html" id="logout">Logout</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -428,6 +442,8 @@ document.getElementById("hcard").innerHTML = "Your reservation handles the servi
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <script src="../scripts/navbar.js"></script>
+        <script src="../scripts/timeout.js"></script>
 </body>
 
 </html>
