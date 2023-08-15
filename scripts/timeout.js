@@ -1,5 +1,5 @@
-const sessionTimeoutDuration = 300000;
-const cardDisplayDelay = 300000;
+const sessionTimeoutDuration = 10000;
+const cardDisplayDelay = 10000;
 
 let sessionTimeout;
 let cardTimeout;
@@ -24,6 +24,7 @@ function logout() {
   localStorage.setItem('islogin', 'false');
   localStorage.removeItem('firstname');
   localStorage.removeItem('lastname');
+  window.location.href = "../pages/index.html";
   window.location.reload();
 }
 
