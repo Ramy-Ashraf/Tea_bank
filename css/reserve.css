@@ -1,5 +1,20 @@
 /* added by malak lel form w msh shaghal */
 
+#popupCard {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 9999; /* Ensure the card is on top of other elements */
+    border: #4c4d56;
+  }
+
 .error-message {
     color: red;
     font-size: 14px;
@@ -7,7 +22,7 @@
 }
 
 .display-area {
-width: 30px;
+width: 50px;
 background-color: #fff;
 }
 .form-check-input {
@@ -49,4 +64,19 @@ background-color: #fffbfb;
 .dropdown-menu .dropdown-item.active {
 background-color: #007bff;
 color: #fff;
+}
+
+
+.card button {
+    background-color: #3c3d48;
+    color: rgb(151, 214, 233);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.card button:hover {
+    background-color: #4c4d56;
 }
