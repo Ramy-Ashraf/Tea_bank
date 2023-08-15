@@ -126,26 +126,26 @@
                     </table>
                 </div>
                 <span id="ap" class="d-none">Appointments</span>
-                <div class="table-responsive d-none">
-                    <table class="table align-middle table-striped-columns mt-2">
+                <div id="ap" class="table-responsive d-none">
+                    <table id="ap" class="table align-middle table-striped-columns mt-2">
                         <tbody>
                             <!-- <tr>
                                 <th scope="row">Phone number</th>
                                 <td id="phoneNumber"></td>
                             </tr> -->
-                            <tr>
+                            <tr id="tr">
                                 <th scope="row">Service</th>
                                 <td id="service"></td>
                             </tr>
-                            <tr>
+                            <tr id="tr">
                                 <th scope="row">Branch</th>
-                                <td id="location"></td>
+                                <td id="branch"></td>
                             </tr>
-                            <tr>
+                            <tr id="tr">
                                 <th scope="row">Date</th>
                                 <td id="date"></td>
                             </tr>
-                            <tr>
+                            <tr id="tr">
                                 <th scope="row">Timeslot</th>
                                 <td id="time"></td>
                             </tr>
@@ -160,11 +160,11 @@
         </div>
         <div class="d-flex justify-content-center" id="pageTopRow">
             <div class="card hidden d-none">
-                <div class="card-body justify-content-center text-center align-items-center">
+                <div id="ap" class="card-body justify-content-center text-center align-items-center">
 
-                    <div class="h2 p-3 text-align-center">Application Complete</h5>
+                    <div id="ap" class="h2 p-3 text-align-center">Application Complete</h5>
                     </div>
-                    <a class="btn btn-outline-dark mb-5" href="../TEA-BANK.html">Back To Home</a>
+                    <a id="ap" class="btn btn-outline-dark mb-5" href="../TEA-BANK.html">Back To Home</a>
                 </div>
             </div>
         </div>
@@ -174,10 +174,19 @@
     <script>
         if (window.sessionStorage.getItem("log") !== null) {
 
-            document.querySelector("ap").className.remove("d-none");
             
+            document.getElementById("ap").classList.remove("d-none");
+            document.getElementById("tr").classList.remove("d-none");
+           
+                  
+            document.getElementById("ap").classList.remove("table-responsive");
+            document.getElementById("tr").classList.remove("table-responsive");
+
+            document.getElementById("ap").classList.remove("card");
+            document.getElementById("tr").classList.remove("card");
+           
 // get log and parse
-            var l = window.sessionStorage.getItem("log");
+         var l = window.sessionStorage.getItem("log");
          var string = JSON.parse(l) //bey2asemhom
 // get services
         var serv = string.service
@@ -187,19 +196,19 @@
 
 // get branch
          var branch = string.branch
-         var infor = document.createTextNode(branch);
+          infor = document.createTextNode(branch);
 // put branch in table         
-         document.getElementById("branch").textContent = infor.textContent
+         document.getElementById("branch").appendChild(infor)
 
  // get date
  var date = string.date
-         var infor = document.createTextNode(date);
+          infor = document.createTextNode(date);
 // put branch in table         
          document.getElementById("date").textContent = infor.textContent
          
 // get time
 var time = string.time
-         var infor = document.createTextNode(time);
+          infor = document.createTextNode(time);
 // put branch in table         
          document.getElementById("time").textContent = infor.textContent         
 
