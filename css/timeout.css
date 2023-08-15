@@ -1,5 +1,5 @@
 /* Add your desired styles here */
-.card {
+.timoutCard {
     display:none;
     position: fixed;
     top: 50%;
@@ -13,17 +13,17 @@
     z-index: 1000000000;
 }
 
-.card h2 {
+.timoutCard h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.card p {
+.timoutCard p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.card button {
+.timoutCard button {
     background-color: #3c3d48;
     color: white;
     padding: 10px 20px;
@@ -33,6 +33,6 @@
     font-size: 16px;
 }
 
-.card button:hover {
+.timoutCard button:hover {
     background-color: #4c4d56;
 }
