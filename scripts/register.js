@@ -23,6 +23,12 @@ const lostpass = document.getElementById("lostpass");
 let toggle = 0;
 let islogin = false;
 
+function ValidateKey(e) {
+    var keyCode = e.keyCode || e.which;
+    var regex = /^[0-9]$/;
+    return regex.test(String.fromCharCode(keyCode));
+}
+
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector(".error");
