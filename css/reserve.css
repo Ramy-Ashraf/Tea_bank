@@ -1,4 +1,15 @@
 /* added by malak lel form w msh shaghal */
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.display-area {
+width: 30px;
+background-color: #fff;
+}
 .form-check-input {
     width: 2px;
     height: 2px;

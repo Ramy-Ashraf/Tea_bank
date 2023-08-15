@@ -94,7 +94,7 @@
                     <button type="button" id="signinBtn" class="disable">Sign In</button> -->
                 </div>
                 <div class="h3"> Select a service </div>
-                <div id="check" class="checkBoxService" name="number[]" required>
+                <div id="check" class="checkBoxService" name="number[]">
                     <input id="a" class="form-check-input" type="checkbox" value="Apply for a loan"  id="loan">
                     <label class="form-check-label" for="loan">
                         Apply for a loan
@@ -113,7 +113,7 @@
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="d" class="form-check-input" type="checkbox" value=" Investment and Retirement"  id="invest">
+                    <input id="d" class="form-check-input" type="checkbox" value="Investment and Retirement"  id="invest">
                     <label class="form-check-label" for="invest">
                         Investment and Retirement
                     </label>
@@ -124,6 +124,7 @@
                         Other
                     </label>
                 </div>
+                <div id="checkboxError" class="error-message"></div>
 
                 <div class="container mt-3">
                     <h2>Branch</h2>
@@ -138,7 +139,7 @@
                         <option>October City</option>
                       </select>
                       <br>
-                    </form>
+                   
 
                       <div class="container mt-3">
                         <h2>Date</h2>
@@ -156,7 +157,7 @@ serviceDate.min = new Date().toISOString().split("T")[0];
                             Bootstrap 5, add the .form-select class to the select element:</p> -->
                         <form action="/action_page.php">
                           <label for="sel1" class="form-label">Please select a timeslot</label>
-                          <select class="form-select" id="sel1" name="sellist1" required>
+                          <select class="form-select" id="sel2" name="sellist1" required>
                             <option value="" selected>Select a Timeslot</option>
                             <option>9:30-10:30</option>
                             <option>10:30-11:30</option>
@@ -164,12 +165,27 @@ serviceDate.min = new Date().toISOString().split("T")[0];
                           </select>
                           <br>
                         </div>
-                        </form>
-                     
+                        
+                        <p id="lostpass"></p>
+                <button id="loginBtn" class="btn" type="submit">Done</button>
 
-                    <p id="lostpass"></p>
-                <button id="loginBtn" class="btn" type="submit" >Done</button>
-                     
+                <div class="display-area" id="displayArea">
+                    
+                  </div>    
+
+                  <div id="popupCard" class="card" style="display: none;">
+                    <div class="card-content">
+                    <h1>Pop-up Card</h1>
+                    <p>This is a pop-up card.</p>
+                    
+            <button id="loginBtn" >Reschedule</button>
+            <button id="loginBtn" >Confirm</button>
+                  </div>
+                  </div>
+
+                
+            </form>     
+            </form>     
             </form>
         </div>
     </div>
@@ -177,31 +193,70 @@ serviceDate.min = new Date().toISOString().split("T")[0];
     </div>
 
 <script>
-    $.validator.addMethod( "at_least_one", function() {
-    return $( "input[name='number[]']:checked" ).length;
-}, 'Select at least one number' );
-
-
-$('#myform').validate({
-    rules: {
-        check:{
-            required: true
-        },
+    document.getElementById("myform").addEventListener("submit", function(event) {
+    var checkboxes = document.querySelectorAll(".form-check-input");
+    var checkboxError = document.getElementById("checkboxError");
     
-        'number[]': {
-      required: true,
-      minlength: 1
-        }
-    },
-
-    messages: {
-        'number[]': {
-      required: "Please check at least 1 option.",
-      minlength: "Please check at least {0} option."
+    var isChecked = false;
+    for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            isChecked = true;
+            break;
         }
     }
-})
+    
+    if (!isChecked) {
+        checkboxError.textContent = "Please select at least one service.";
+        event.preventDefault(); // Prevent form submission
+    } else {
+        checkboxError.textContent = ""; // Clear error message
 
+        show();
+    }
+});
+
+function show(){
+    const s=[]
+    if(a.checked){
+          const a =  "Apply for a personal loan"
+          s.push(a)
+        }
+        if(b.checked ){
+          const b =  "Get a Safe Deposit Box"
+          s.push(b)
+        }
+        if(c.checked){
+          const c = "Deposit cash"
+          s.push(c)
+        }if(d.checked){
+          const d = " Investment and Retirement"
+          s.push(d) 
+        }
+        if(e.checked){
+          const e = "other"
+          s.push(e) 
+}
+
+    var branch = document.getElementById("sel1").value;
+    var date = document.getElementById("serviceDate").value;
+    var time = document.getElementById("sel2").value;
+
+        const log = {
+        service: s,
+        branch: branch,
+        date:date,
+        time:time
+    }
+
+    window.sessionStorage.setItem("log",JSON.stringify(log)); 
+
+    
+    popupCard.innerHTML = "Reservation details:  " +"<br>" + "Your reservation handles the services: "+ s +
+   "<br>"+"Date: "+ date +"<br>"+"Timeslot: "+ time +"<br>"+ "Branch: " + branch
+   document.getElementById("popupCard").style.display = "block";
+   event.preventDefault();
+}
+   
 
 </script>
     <!-- footer -->
