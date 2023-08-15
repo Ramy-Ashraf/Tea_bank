@@ -87,6 +87,8 @@
         </div>
     </nav>
     <!-- navbar end -->
+
+    
     <div class="d-flex justify-content-center" id="pageTopRow">
         <div class="card" id="accountInfo">
             <div class="card-body">
@@ -123,20 +125,20 @@
                         </tbody>
                     </table>
                 </div>
-                <span class="d-none">Appointments</span>
+                <span id="ap" class="d-none">Appointments</span>
                 <div class="table-responsive d-none">
                     <table class="table align-middle table-striped-columns mt-2">
                         <tbody>
-                            <tr>
+                            <!-- <tr>
                                 <th scope="row">Phone number</th>
                                 <td id="phoneNumber"></td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <th scope="row">Service</th>
                                 <td id="service"></td>
                             </tr>
                             <tr>
-                                <th scope="row">Location</th>
+                                <th scope="row">Branch</th>
                                 <td id="location"></td>
                             </tr>
                             <tr>
@@ -144,9 +146,13 @@
                                 <td id="date"></td>
                             </tr>
                             <tr>
+                                <th scope="row">Timeslot</th>
+                                <td id="time"></td>
+                            </tr>
+                            <!-- <tr>
                                 <th scope="row">Notes</th>
                                 <td id="notes"></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -164,6 +170,49 @@
         </div>
     </div>
     <!-- footer -->
+
+    <script>
+        if (window.sessionStorage.getItem("log") !== null) {
+
+            document.querySelector("ap").className.remove("d-none");
+            
+// get log and parse
+            var l = window.sessionStorage.getItem("log");
+         var string = JSON.parse(l) //bey2asemhom
+// get services
+        var serv = string.service
+         var infor = document.createTextNode(serv);
+// put services in table         
+        document.getElementById("service").textContent = infor.textContent
+
+// get branch
+         var branch = string.branch
+         var infor = document.createTextNode(branch);
+// put branch in table         
+         document.getElementById("branch").textContent = infor.textContent
+
+ // get date
+ var date = string.date
+         var infor = document.createTextNode(date);
+// put branch in table         
+         document.getElementById("date").textContent = infor.textContent
+         
+// get time
+var time = string.time
+         var infor = document.createTextNode(time);
+// put branch in table         
+         document.getElementById("time").textContent = infor.textContent         
+
+
+
+
+
+} else {
+  // The sessionStorage does not contain anything.
+}
+        
+    </script>
+
     <div class="container-fluid" id="footer">
         <footer>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5">
