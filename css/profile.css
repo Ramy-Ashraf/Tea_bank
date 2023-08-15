@@ -1,0 +1,112 @@
+.navbar {
+    margin: none;
+    background: #ffffff;
+}
+
+
+.navbar.scrolled {
+    background-color: rgba(224, 224, 224, 0.9);
+    transition: all 500ms;
+}
+
+#accountInfo {
+    background-color: rgb(255, 255, 255);
+    width: 45rem;
+    overflow: auto;
+}
+.card.hidden{
+    background-color: rgb(255, 255, 255);
+    width: 45rem;
+    overflow: auto;
+}
+
+.card-text {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: none;
+    border-bottom: 1px solid #cacaca;
+}
+
+.form-text.register {
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.form-text.register:hover {
+    text-decoration: underline;
+    color: rgb(39, 39, 39);
+}
+
+#secondName:focus,
+#firstName:focus,
+#email:focus,
+#search:focus,
+#serviceSelect:focus,
+#locationSelect:focus,
+#notes:focus,
+#telephone:focus,
+#date:focus {
+    border-color: #3b3b3b4d;
+    outline: 0;
+    box-shadow: 0 0 0 3px #3b3b3b4d;
+    transition: all 200ms ease-in;
+}
+
+#notes {
+    resize: none;
+}
+
+#notes:focus {
+    background-color: #f7f7f7;
+}
+
+#footer {
+    margin-bottom: 0;
+    background: #414346;
+    color: #f7f7f7;
+}
+
+.footerAction {
+    text-decoration: underline;
+    transition: all 0.5s ease-in-out;
+    color: #f7f7f7;
+    margin-bottom: 10px;
+}
+.footerAction:hover {
+    color: rgb(172, 172, 172);
+}
+
+#pageTopRow {
+    padding-top: 10vh;
+    padding-bottom: 19vh;
+    background-color: #E0E0E0;
+}
+
+/* #6c6b65 */
+/* #FFF8EA */
+@media(max-width:768px) {
+    #accountInfo {
+        overflow: auto;
+    }
+}
+
+.input-control.error input,
+.input-control.error #basic-addon1,
+.input-control.error select {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+}
+
+
+
+#notes{
+    word-wrap: break-word;
+}
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+  }

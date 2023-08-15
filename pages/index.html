@@ -24,7 +24,7 @@
 
 
 <body>
-    <div id="sessionTimeoutCard" class="card">
+    <div id="sessionTimeoutCard" class="card_timeoutCard">
         <div class="card-content">
             <h2>Your session has expired</h2>
             <p>Please log in again to continue.</p>
@@ -63,17 +63,17 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Overview">Overview</a></li>
+                                    href="#About">Overview</a></li>
                             <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Milestones">Milestones</a></li>
+                                    href="https://www.teacomputers.com/Organization/Milestones" target="_blank">Milestones</a></li>
                             <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Founders">Founders</a></li>
+                                    href="https://www.teacomputers.com/Organization/Founders" target="_blank">Founders</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="loginStatus">
                         <a class="nav-link" aria-current="page" href="../pages/register.html" id="login">Login</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link d-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false" id="account">Account</a>
                         <ul class="dropdown-menu">
@@ -81,7 +81,7 @@
                             <li><a class="dropdown-item" href="Account/account.html">My Account</a></li>
                             <li><a class="dropdown-item  d-none" href="./TEA-BANK.html" id="logout">Logout</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -285,7 +285,7 @@
                     segments continues to introduce new customers to the bank. As a result, TeaB has succeeded in
                     becoming the most profitable commercial bank operating in Egypt for more than 40 years.</p>
                 <div class="data">
-                    <a href="https://www.teacomputers.com/Organization/Milestones" target=”_blank”
+                    <a href="https://www.teacomputers.com/Organization/Overview" target=”_blank”
                         class="learnmore">Learn More</a>
                 </div>
             </div>
@@ -394,6 +394,8 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
         <script defer src="../scripts/index.js"></script>
+        <script defer src="../scripts/navbar.js"></script>
+        <script defer src="../scripts/timeout.js"></script>
 </body>
 
 </html>
