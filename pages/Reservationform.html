@@ -84,7 +84,14 @@
     </nav>
     <!-- navbar end -->
 
-<!-- confirm popup -->
+    <!-- Eshta confirmed -->
+    <div id="popupCard3" class="card" style="display: none;">
+        <h5 class="card-body">Your reservation has been successfully confirmed</h5>
+<button onclick="home()" id="home">Back to home</button>
+      
+      </div>
+
+<!-- confirm? popup -->
     <div id="popupCard2" class="card" style="display: none;">
         <h2 class="card-title" id="attention" style="color: crimson;">
             Attention
@@ -97,7 +104,9 @@
         </p>
     </div>
     <div class="card-content">
-<button onclick="confirm()" id="confirm">Confirm</button>
+<button onclick="confirm2()" id="confirm2">Confirm</button>
+<button onclick="res2()" id="Reschedule" >Reschedule</button>
+<button onclick="cancel()" id="cancel" >Cancel</button>
       </div>
     </div>
 
@@ -109,12 +118,14 @@
         <p id="hcard">This is a pop-up card.</p>
     </div>
     <div class="card-content">
-<button href="Reservationform.html" id="Reschedule" >Reschedule</button>
+<button onclick="res()" id="Reschedule" >Reschedule</button>
 <br>
 <button onclick="confirm()" id="confirm">Confirm</button>
-      
       </div>
     </div>
+
+    
+    
 
     <div class="container-fluid d-flex justify-content-center align-items-center pt-5 pb-5" id="pageMiddle">
         <div class="form-box">
@@ -216,16 +227,6 @@ serviceDate.min = new Date().toISOString().split("T")[0];
 
 <script>
 
-    $(document).ready(function(){
-    var Att= document.getElementById("attention")
-$(Att).toggle(function(){
-  $(this).animate({fontSize: '40px'}, "slow")
-})
-$(Att).toggle(function(){
-  $(this).animate({fontSize: '25px'}, "slow")
-});
-  })
-
     document.getElementById("myform").addEventListener("submit", function(event) {
     var checkboxes = document.querySelectorAll(".form-check-input");
     var checkboxError = document.getElementById("checkboxError");
@@ -248,10 +249,43 @@ $(Att).toggle(function(){
     }
 });
 
+function res(){
+    document.getElementById("popupCard").style.display = "none"
+}
+function res2(){
+    document.getElementById("popupCard2").style.display = "none"
+}
+function home(){
+    window.location.href= "index.html"
+}
+function cancel(){
+    window.location.href= "index.html"
+}
+function confirm2(){
+    //document.getElementById("popupCard2").style.display = "none";
+    $(document).ready(function(){
+    var Att= document.getElementById("popupCard2")
+$(Att).toggle(function(){
+  $(this).animate()
+})
+
+  })
+
+    document.getElementById("popupCard3").style.display = "block";
+  }
+
 function confirm(){
         document.getElementById("popupCard").style.display = "none";
-        document.getElementById("popupCard2").style.display = "block";
-    }
+        
+    $(document).ready(function(){
+    var Att= document.getElementById("popupCard2")
+$(Att).toggle(function(){
+  $(this).animate()
+})
+
+  })
+}
+    
 
 function show(){
     const s=[]
