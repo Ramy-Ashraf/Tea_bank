@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/x-icon" href="../assets/icons/TEA.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
@@ -21,7 +21,7 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <link rel="stylesheet" href="../css/navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- <link rel="stylesheet" href="../css/Reservationform.css"> -->
     <script src="https://kit.fontawesome.com/90afc3c3da.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/register.css">
@@ -72,12 +72,11 @@
                             About
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item"
-                                    href="#About">Overview</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Milestones" target="_blank">Milestones</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Founders" target="_blank">Founders</a></li>
+                            <li><a class="dropdown-item" href="#About">Overview</a></li>
+                            <li><a class="dropdown-item" href="https://www.teacomputers.com/Organization/Milestones"
+                                    target="_blank">Milestones</a></li>
+                            <li><a class="dropdown-item" href="https://www.teacomputers.com/Organization/Founders"
+                                    target="_blank">Founders</a></li>
                         </ul>
                     </li>
                     <li class="nav-item" id="loginStatus">
@@ -101,51 +100,52 @@
     <!-- Eshta confirmed -->
     <div id="popupCard3" class="card" style="display: none;">
         <h5 class="card-body">Your reservation has been successfully confirmed</h5>
-<button onclick="home()" id="home">Back to home</button>
-      
-      </div>
+        <button onclick="home()" id="home">Back to home</button>
 
-<!-- confirm? popup -->
+    </div>
+
+    <!-- confirm? popup -->
     <div id="popupCard2" class="card" style="display: none;">
         <h2 class="card-title" id="attention" style="color: crimson;">
             Attention
-          </h2>
-          <h5>Estimated wait time = 40min</h5>
+        </h2>
+        <h5>Estimated wait time = 40min</h5>
         <div class="card-body">
-           
-        <p>3 other clients have reserved the same date and timeslot as you</p>
-        <br>  <p> Do you still want to confirm your reservation?
-        </p>
-    </div>
-    <div class="card-content">
-<button onclick="confirm2()" id="confirm2">Confirm</button>
-<button onclick="res2()" id="Reschedule" >Reschedule</button>
-<button onclick="cancel()" id="cancel" >Cancel</button>
-      </div>
+
+            <p>3 other clients have reserved the same date and timeslot as you</p>
+            <br>
+            <p> Do you still want to confirm your reservation?
+            </p>
+        </div>
+        <div class="card-content">
+            <button onclick="confirm2()" id="confirm2">Confirm</button>
+            <button onclick="res2()" id="Reschedule">Reschedule</button>
+            <button onclick="cancel()" id="cancel">Cancel</button>
+        </div>
     </div>
 
     <!-- Reservation popup -->
     <div id="popupCard" class="card" style="display: none;">
         <h5 class="card-title">Reservation details</h5>
         <details>
-        <div class="card-body">
-        <p id="hcard">This is a pop-up card.</p>
-    </div>
-    <div class="card-content">
-<button onclick="res()" id="Reschedule" >Reschedule</button>
-<br>
-<button onclick="confirm()" id="confirm">Confirm</button>
-      </div>
+            <div class="card-body">
+                <p id="hcard">This is a pop-up card.</p>
+            </div>
+            <div class="card-content">
+                <button onclick="res()" id="Reschedule">Reschedule</button>
+                <br>
+                <button onclick="confirm()" id="confirm">Confirm</button>
+            </div>
     </div>
 
-    
-    
+
+
 
     <div class="container-fluid d-flex justify-content-center align-items-center pt-5 pb-5" id="pageMiddle">
         <div class="form-box">
             <h1 id="title">Reserve Appointment</h1>
 
-       
+
 
             <form id="myform">
                 <div class="btn-field">
@@ -154,31 +154,33 @@
                 </div>
                 <div class="h3"> Select a service </div>
                 <div id="check" class="checkBoxService" name="number[]">
-                    <input id="a" class="form-check-input" type="checkbox" value="Apply for a loan"  id="loan">
+                    <input id="a" class="form-check-input" type="checkbox" value="Apply for a loan" id="loan">
                     <label class="form-check-label" for="loan">
                         Apply for a loan
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="b" class="form-check-input" type="checkbox" value="Get a Safe Deposit Box"  id="safeDeposit">
+                    <input id="b" class="form-check-input" type="checkbox" value="Get a Safe Deposit Box"
+                        id="safeDeposit">
                     <label class="form-check-label" for="safeDeposit">
                         Get a Safe Deposit Box
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="c" class="form-check-input" type="checkbox" value="Deposit cash"  id="deposit">
+                    <input id="c" class="form-check-input" type="checkbox" value="Deposit cash" id="deposit">
                     <label class="form-check-label" for="deposit">
                         Deposit cash
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="d" class="form-check-input" type="checkbox" value="Investment and Retirement"  id="invest">
+                    <input id="d" class="form-check-input" type="checkbox" value="Investment and Retirement"
+                        id="invest">
                     <label class="form-check-label" for="invest">
                         Investment and Retirement
                     </label>
                 </div>
                 <div class="checkBoxService">
-                    <input id="e" class="form-check-input" type="checkbox" value="Other"  id="other">
+                    <input id="e" class="form-check-input" type="checkbox" value="Other" id="other">
                     <label class="form-check-label" for="other">
                         Other
                     </label>
@@ -190,51 +192,51 @@
                     <!-- <p>To style a select menu in 
                         Bootstrap 5, add the .form-select class to the select element:</p> -->
                     <form action="/action_page.php">
-                      <label for="sel1" class="form-label">Please select a branch</label>
-                      <select class="form-select" id="sel1" name="sellist1" required>
-                        <option value="" selected>Select a branch</option>
-                        <option>7 El Horreya St., Heliopolis, Cairo.</option>
-                        <option>Kilo 28, Cairo/Alex Desert Road, Bldg #B17, Smart Village</option>
-                        <option>5 Mostafa Kamel St., Semouha, Alexandria</option>
-                      </select>
-                      <br>
-                   
-
-                      <div class="container mt-3">
-                        <h2>Date</h2>
-                  <label for="serviceDate">Select a date:</label>
-<input style="color: white;" type="date" id="serviceDate" name="serviceDate"  required>
-</div>
+                        <label for="sel1" class="form-label">Please select a branch</label>
+                        <select class="form-select" id="sel1" name="sellist1" required>
+                            <option value="" selected>Select a branch</option>
+                            <option>7 El Horreya St., Heliopolis, Cairo.</option>
+                            <option>Kilo 28, Cairo/Alex Desert Road, Bldg #B17, Smart Village</option>
+                            <option>5 Mostafa Kamel St., Semouha, Alexandria</option>
+                        </select>
+                        <br>
 
 
-
-                      <div class="container mt-3">
-                        <h2>Timeslot</h2>
-                        <!-- <p>To style a select menu in 
-                            Bootstrap 5, add the .form-select class to the select element:</p> -->
-                        <form action="/action_page.php">
-                          <label for="sel1" class="form-label">Please select a timeslot</label>
-                          <select class="form-select" id="sel2" name="sellist1" required>
-                            <option value="" selected>Select a Timeslot</option>
-                            <option>9:30-10:30</option>
-                            <option>10:30-11:30</option>
-                            <option>11:30-12:30</option>
-                          </select>
-                          <br>
+                        <div class="container mt-3" id="date1">
+                            <h2>Date</h2>
+                            <label for="serviceDate">Select a date:</label>
+                            <input type="date" id="serviceDate" name="serviceDate" required>
                         </div>
-                        
-                        <p id="lostpass"></p>
-                <button id="loginBtn" class="btn" type="submit">Done</button>
 
-                <div class="display-area" id="displayArea">
-                    
-                  </div>  
-            </form>     
-            </form>     
-           
+
+
+                        <div class="container mt-3">
+                            <h2>Timeslot</h2>
+                            <!-- <p>To style a select menu in 
+                            Bootstrap 5, add the .form-select class to the select element:</p> -->
+                            <form action="/action_page.php">
+                                <label for="sel1" class="form-label">Please select a timeslot</label>
+                                <select class="form-select" id="sel2" name="sellist1" required>
+                                    <option value="" selected>Select a Timeslot</option>
+                                    <option>9:30-10:30</option>
+                                    <option>10:30-11:30</option>
+                                    <option>11:30-12:30</option>
+                                </select>
+                                <br>
+                        </div>
+
+                        <p id="lostpass"></p>
+                        <button id="loginBtn" class="btn" type="submit">Done</button>
+
+                        <div class="display-area" id="displayArea">
+
+                        </div>
+                    </form>
+            </form>
+
         </div>
     </div>
-        </div>
+    </div>
     </div>
 
 

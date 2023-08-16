@@ -12,6 +12,14 @@ body {
     color: white;
     padding-left: 15%;
 }
+
+#serviceDate{
+    background-color: #fff;
+    border-radius: 5px;
+    height: 10px;
+
+}
+
 .checkBoxService{
     display: flex;
     justify-content: left;
