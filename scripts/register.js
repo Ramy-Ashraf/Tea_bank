@@ -89,38 +89,24 @@ form.addEventListener("submit", e => {
     validateInputs();
 
     if (toggle == 0) {
-        if (fnameField.parentElement.classList.contains("success") && emailField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success") && confirmPass.parentElement.classList.contains("success")) {
+        if (fnameField.parentElement.classList.contains("success") && lnameField.parentElement.classList.contains("success") && emailField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success") && confirmPass.parentElement.classList.contains("success") && idvalue.parentElement.classList.contains("success")) {
             islogin = true;
             localStorage.setItem("firstname", fnameField.value);
-            localStorage.setItem("islogin", islogin);
-            window.location.href = "index.html";
-        }
-    } else {
-        if (fnameField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success")) {
-            islogin = true;
-            localStorage.setItem("firstname", fnameField.value);
-            localStorage.setItem("islogin", islogin);
-            window.location.href = "index.html";
-        }
-    }
-
-    if (toggle == 0) {
-        if (lnameField.parentElement.classList.contains("success") && emailField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success") && confirmPass.parentElement.classList.contains("success")) {
-            islogin = true;
             localStorage.setItem("lastname", lnameField.value);
             localStorage.setItem("islogin", islogin);
             window.location.href = "index.html";
         }
     } else {
-        if (lnameField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success")) {
+        if (emailField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success")) {
             islogin = true;
-            localStorage.setItem("lastname", lnameField.value);
+            // localStorage.setItem("firstname", fnameField.value);
             localStorage.setItem("islogin", islogin);
             window.location.href = "index.html";
         }
     }
-
 });
+
+
 
 const validateInputs = () => {
 
