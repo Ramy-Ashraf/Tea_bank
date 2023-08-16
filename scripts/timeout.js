@@ -21,11 +21,11 @@ function showSessionTimeoutCard() {
 }
 
 function logout() {
+  // window.location.href = "../pages/index.html";
   localStorage.setItem('islogin', 'false');
   localStorage.removeItem('firstname');
   localStorage.removeItem('lastname');
-  window.location.href = "../pages/index.html";
-  window.location.reload();
+  window.location.href='../pages/index.html';
 }
 
 window.onload = function () {
