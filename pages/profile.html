@@ -128,7 +128,7 @@
                 <span id="ap" class="d-none">Appointments</span>
                 <div id="ap" class="table-responsive d-none">
                     <table id="ap" class="table align-middle table-striped-columns mt-2">
-                        <tbody>
+                        <tbody id="ap">
                             <!-- <tr>
                                 <th scope="row">Phone number</th>
                                 <td id="phoneNumber"></td>
@@ -175,15 +175,15 @@
         if (window.sessionStorage.getItem("log") !== null) {
 
             
-            document.getElementById("ap").classList.remove("d-none");
-            document.getElementById("tr").classList.remove("d-none");
-           
-                  
-            document.getElementById("ap").classList.remove("table-responsive");
-            document.getElementById("tr").classList.remove("table-responsive");
+            // document.getElementById("ap").classList.remove("d-none");
+            // document.getElementById("tr").classList.remove("d-none");
+            const apElements = document.querySelectorAll("ap");
+    apElements.forEach(apElement => apElement.classList.remove("d-none"));
 
-            document.getElementById("ap").classList.remove("card");
-            document.getElementById("tr").classList.remove("card");
+    const trElements = document.querySelectorAll("tr");
+    trElements.forEach(trElement => trElement.classList.remove("d-none"));
+
+          
            
 // get log and parse
          var l = window.sessionStorage.getItem("log");
