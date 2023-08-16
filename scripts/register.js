@@ -93,14 +93,14 @@ form.addEventListener("submit", e => {
             islogin = true;
             localStorage.setItem("firstname", fnameField.value);
             localStorage.setItem("islogin", islogin);
-            window.location.href = "Home.html";
+            window.location.href = "index.html";
         }
     } else {
         if (fnameField.parentElement.classList.contains("success") && passField.parentElement.classList.contains("success")) {
             islogin = true;
             localStorage.setItem("firstname", fnameField.value);
             localStorage.setItem("islogin", islogin);
-            window.location.href = "Home.html";
+            window.location.href = "index.html";
         }
     }
 
