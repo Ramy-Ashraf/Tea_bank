@@ -1,5 +1,5 @@
-const sessionTimeoutDuration = 5000;
-const cardDisplayDelay = 5000;
+const sessionTimeoutDuration = 10000;
+const cardDisplayDelay = 10000;
 
 let sessionTimeout;
 let cardTimeout;

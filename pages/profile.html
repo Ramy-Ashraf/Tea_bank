@@ -126,6 +126,7 @@
                     </table>
                 </div>
                 <span id="ap" class="d-none">Appointments</span>
+                <button id="ap" onclick="cancelapp()" class="d-none">Cancel appointment</button>
                 <div id="ap" class="table-responsive d-none">
                     <table id="ap" class="table align-middle table-striped-columns mt-2">
                         <tbody id="ap">
@@ -172,24 +173,27 @@
     <!-- footer -->
 
     <script>
+        function cancelapp(){
+            const confirmMessage = "Are you sure you want to cancel your appointment?";
+
+    if (confirm(confirmMessage)){
+        window.sessionStorage.removeItem("log");
+        window.location.reload();
+    }
+        }
+
+
         if (window.sessionStorage.getItem("log") !== null) {
 
             
             // document.getElementById("ap").classList.remove("d-none");
             // document.getElementById("tr").classList.remove("d-none");
-            const apElements = document.querySelectorAll("ap");
-    const apArray = Array.from(apElements);
-    for (const apElement of apArray) {
-        apElement.classList.remove("d-none");
-    }
+            const apElements= document.querySelectorAll("#ap");
+            document.querySelectorAll("#ap").forEach(apElement => apElement.classList.remove("d-none"));
 
-    const trElements = document.querySelectorAll("tr");
-    const trArray = Array.from(trElements);
-    for (const trElement of trArray) {
-        trElement.classList.remove("d-none");
-    }
-     
-           
+            const trElements= document.querySelectorAll("#tr");
+            document.querySelectorAll("#tr").forEach(trElement => trElement.classList.remove("d-none"));
+
 // get log and parse
          var l = window.sessionStorage.getItem("log");
          var string = JSON.parse(l) //bey2asemhom
