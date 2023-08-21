@@ -11,10 +11,12 @@ const emailField = document.getElementById("email1");
 const passField = document.getElementById("password1");
 const confirmPass = document.getElementById("password2");
 const idvalue = document.getElementById("idnumber1");
+const phoneFeild = document.getElementById("phone1");
 
 const fnamebox = document.getElementById("fnameField");
 const lnamebox = document.getElementById("lnameField");
 const emailbox = document.getElementById("Email");
+const phonebox = document.getElementById("Phone");
 const idbox = document.getElementById("idnumber");
 const passbox = document.getElementById("Password");
 const passbox2 = document.getElementById("confirmPass");
@@ -58,6 +60,7 @@ signupBtn.onclick = function () {
     lnamebox.style.maxHeight = "60px";
     passbox2.style.maxHeight = "60px";
     idbox.style.maxHeight = "60px";
+    phonebox.style.maxHeight = "60px";
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
     loginBtn.innerHTML = "Done";
@@ -71,6 +74,7 @@ signinBtn.onclick = function () {
     title.innerHTML = "Sign In";
     passbox2.style.maxHeight = "0";
     idbox.style.maxHeight = "0";
+    phonebox.style.maxHeight = "0";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
     loginBtn.innerHTML = "Login In";
@@ -132,12 +136,26 @@ const validateInputs = () => {
         }
     }
 
+
     if (emailValue === "") {
         setError(emailField, "Email cannot be blank");
     } else if (!isValidEmail(emailValue)) {
         setError(emailField, "Email is not valid");
     } else {
         setSuccess(emailField);
+    }
+
+    // check for phone number
+    if (toggle == 0) {
+        if (phoneFeild.value === "") {
+            setError(phoneFeild, "Phone cannot be blank");
+        }
+        else if (isNaN(phoneFeild.value)) {
+            setError(phoneFeild, "Phone must be a number");
+        }
+        else {
+            setSuccess(phoneFeild);
+        }
     }
 
     if (passValue === "") {
