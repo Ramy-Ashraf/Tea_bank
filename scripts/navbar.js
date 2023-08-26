@@ -20,7 +20,7 @@ if (isLogin === 'true' && firstname) {
   loginStatusElement.innerHTML = `<li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="profile.html" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            Hi ${firstname}
+            <i class="fa-regular fa-user"></i> Hi ${firstname}
         </a>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item"
