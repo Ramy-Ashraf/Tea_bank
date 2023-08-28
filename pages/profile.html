@@ -62,12 +62,11 @@
                             About
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item"
-                                    href="#About">Overview</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Milestones" target="_blank">Milestones</a></li>
-                            <li><a class="dropdown-item"
-                                    href="https://www.teacomputers.com/Organization/Founders" target="_blank">Founders</a></li>
+                            <li><a class="dropdown-item" href="#About">Overview</a></li>
+                            <li><a class="dropdown-item" href="https://www.teacomputers.com/Organization/Milestones"
+                                    target="_blank">Milestones</a></li>
+                            <li><a class="dropdown-item" href="https://www.teacomputers.com/Organization/Founders"
+                                    target="_blank">Founders</a></li>
                         </ul>
                     </li>
                     <li class="nav-item" id="loginStatus">
@@ -88,42 +87,54 @@
     </nav>
     <!-- navbar end -->
 
-    
+
     <div class="d-flex justify-content-center" id="pageTopRow">
         <div class="card" id="accountInfo">
             <div class="card-body">
-                <h5 class="card-title h3 pt-3"></h5>
                 <p class="card-text">Your account details is displayed below.</p>
                 <span class="text-align-center">Info</span>
                 <div class="table-responsive">
-                    <table class="table align-middle table-striped-columns">
+                    <table class="table align-middle table-columns">
                         <tbody>
                             <tr>
                                 <th scope="row">First name</th>
-                                <td id="firstName"></td>
+                                <td id="firstName" class="field"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Last name</th>
-                                <td id="lastName"></td>
+                                <td id="lastName" class="field"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Email</th>
-                                <td id="email"></td>
+                                <td id="email" class="field"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Password</th>
-                                <td id="password"></td>
+                                <td id="password" class="field"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Bank ID</th>
-                                <td id="BankID"></td>
+                                <td id="BankID" class="field"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Balance</th>
-                                <td id="Balance"></td>
+                                <td id="Balance" class="field"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="wrapEdit d-flex justify-content-center">
+                    <a href="" class="btn btn-secondary" id="edit"><i class="fa-solid fa-pen-to-square"
+                        style="color: #ffffff;"></i> Edit</a>
+                    </div>
+                    <div class="wrapDone d-flex justify-content-center d-none">
+                        <a href="" class="btn btn-secondary" id="done"><i class="fa-solid fa-square-check" style="color: #ffffff;"></i> Done</a>
+                        </div>
                 </div>
                 <span id="ap" class="d-none">Appointments</span>
                 <button id="ap" onclick="cancelapp()" class="d-none">Cancel appointment</button>
@@ -172,7 +183,7 @@
     </div>
     <!-- footer -->
 
-    
+
 
     <div class="container-fluid" id="footer">
         <footer>
@@ -261,10 +272,10 @@
             </div>
         </footer>
         <script src="https://code.jquery.com/jquery-3.7.0.js"
-        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
         <script src="../scripts/navbar.js"></script>
         <script src="../scripts/timeout.js"></script>
         <script src="../scripts/profile.js"></script>

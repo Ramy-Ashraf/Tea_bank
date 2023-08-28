@@ -38,15 +38,7 @@
     color: rgb(39, 39, 39);
 }
 
-#secondName:focus,
-#firstName:focus,
-#email:focus,
-#search:focus,
-#serviceSelect:focus,
-#locationSelect:focus,
-#notes:focus,
-#telephone:focus,
-#date:focus {
+.form-control:focus{
     border-color: #3b3b3b4d;
     outline: 0;
     box-shadow: 0 0 0 3px #3b3b3b4d;
