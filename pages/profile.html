@@ -87,7 +87,14 @@
     </nav>
     <!-- navbar end -->
 
-
+    <div id="overlay" class="overlay d-none">
+        <div class="card">
+            <span class="close-btn" onclick="closeCard">X</span>
+            <h2>Password Verification</h2>
+            <input type="password" id="password-input" class="form-control" placeholder="Enter your password">
+            <button class="btn btn-secondary mt-3" onclick="verify()">Verify</button>
+        </div>
+    </div>
     <div class="d-flex justify-content-center" id="pageTopRow">
         <div class="card" id="accountInfo">
             <div class="card-body">
@@ -129,13 +136,16 @@
                         </tbody>
                     </table>
                     <div class="wrapEdit d-flex justify-content-center">
-                    <a href="" class="btn btn-secondary" id="edit"><i class="fa-solid fa-pen-to-square"
+                    <a href="" class="btn btn-secondary" onclick="openCard(event)" id="edit"><i class="fa-solid fa-pen-to-square"
                         style="color: #ffffff;"></i> Edit</a>
                     </div>
                     <div class="wrapDone d-flex justify-content-center d-none">
                         <a href="" class="btn btn-secondary" id="done"><i class="fa-solid fa-square-check" style="color: #ffffff;"></i> Done</a>
                         </div>
                 </div>
+
+
+
                 <span id="ap" class="d-none">Appointments</span>
                 <button id="ap" onclick="cancelapp()" class="d-none">Cancel appointment</button>
                 <div id="ap" class="table-responsive d-none">

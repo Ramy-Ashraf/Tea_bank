@@ -2,25 +2,19 @@ const inputs = document.querySelectorAll('.input')
 const Edit = document.querySelector('#edit');
 const Done = document.querySelector('#done');
 const fields = document.querySelectorAll('.field')
-const wrapDone=document.querySelector('.wrapDone')
-const wrapEdit=document.querySelector('.wrapEdit')
-Edit.addEventListener('click', (e) => {
-        for (const [i, field] of fields.entries()) {
-                e.preventDefault();
-                fields[i].classList.toggle('d-none');
-                inputs[i].classList.toggle('d-none');
-        }
-        wrapEdit.classList.toggle('d-none');
-        wrapDone.classList.toggle('d-none');
-})
+const wrapDone = document.querySelector('.wrapDone')
+const wrapEdit = document.querySelector('.wrapEdit')
+const overlay = document.getElementById("overlay")
+
 Done.addEventListener('click', (e) => {
+        e.preventDefault();
         for (const [i, field] of fields.entries()) {
-                e.preventDefault();
                 fields[i].classList.toggle('d-none');
                 inputs[i].classList.toggle('d-none');
         }
         wrapEdit.classList.toggle('d-none');
         wrapDone.classList.toggle('d-none');
+
 })
 
 function cancelapp() {
@@ -79,3 +73,25 @@ if (window.sessionStorage.getItem("log") !== null) {
         // The sessionStorage does not contain anything.
 }
 
+function closeCard() {
+        overlay.classList.toggle('d-none')
+        // Enable scrolling
+}
+
+function verify(){
+        for (const [i, field] of fields.entries()) {
+                fields[i].classList.toggle('d-none');
+                inputs[i].classList.toggle('d-none');
+        }
+        wrapEdit.classList.toggle('d-none');
+        wrapDone.classList.toggle('d-none');
+        overlay.classList.toggle('d-none');
+        overlay.classList.toggle('d-flex');
+}
+
+function openCard(e) {
+        e.preventDefault();
+        overlay.classList.toggle('d-none')
+        overlay.classList.toggle('d-flex');
+        // Disable scrolling  
+}
