@@ -7,6 +7,7 @@ const wrapEdit = document.querySelector('.wrapEdit')
 const overlay = document.getElementById("overlay")
 const overlay2 = document.getElementById("overlay2")
 const overlay3 = document.getElementById("overlay3")
+const overlay4 = document.getElementById("overlay4")
 const verifyChangeAccount= document.querySelector('.verifyChangeAccount')
 Done.addEventListener('click', (e) => {
         e.preventDefault();
@@ -27,7 +28,11 @@ function cancelapp() {
                 window.location.reload();
         }
 }
-
+function ValidateKey(e) {
+        var keyCode = e.keyCode || e.which;
+        var regex = /^[0-9]$/;
+        return regex.test(String.fromCharCode(keyCode));
+    }
 
 if (window.sessionStorage.getItem("log") !== null) {
 
@@ -117,6 +122,17 @@ function openCardSelect(e){
 function closeCardSelect() {
         overlay3.classList.toggle('d-none')
         overlay3.classList.toggle('d-flex')
+        // Enable scrolling
+}
+function openCardNew(e){
+        e.preventDefault();
+        overlay4.classList.toggle('d-none')
+        overlay4.classList.toggle('d-flex')   
+}
+
+function closeCardNew() {
+        overlay4.classList.toggle('d-none')
+        overlay4.classList.toggle('d-flex')
         // Enable scrolling
 }
 

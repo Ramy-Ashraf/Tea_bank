@@ -131,7 +131,7 @@
                     </table>
                     <div class="wrapEdit d-flex justify-content-center">
                         <a href="" class="btn btn-secondary" onclick="openCard(event)" id="edit"><i
-                                class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>   Edit</a>
+                                class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i> Edit</a>
                     </div>
                     <div class="wrapDone d-flex justify-content-center d-none">
                         <a href="" class="btn btn-secondary" id="done"><i class="fa-solid fa-square-check"
@@ -150,15 +150,18 @@
                             </tr>
                         </tbody>
                     </table>
-                    <div class="wrapBankAccount d-flex justify-content-center">
-                        <a href="" class="btn btn-secondary" id="Bank Account Change" onclick="openCardChange(event)"><i class="fa-solid fa-retweet"
-                                style="color: #ffffff;"></i>     Change Bank Account</a>
+                    <div class="wrapBankAccount d-flex justify-content-evenly">
+                        <a href="" class="btn btn-secondary" id="bankAccountChange" onclick="openCardChange(event)"><i
+                                class="fa-solid fa-retweet" style="color: #ffffff;"></i> Change Bank Account</a>
+                        <a href="" class="btn btn-secondary" onclick="openCardNew(event)"><i
+                                class="fa-solid fa-plus" style="color: #ffffff;"></i> Add a new bank account</a>
                     </div>
                     <div id="overlay2" class="overlay2 d-none">
                         <div class="card">
                             <span class="close-btn" onclick="closeCardChange()">X</span>
                             <h2>Password Verification</h2>
-                            <input type="password" id="password-input" class="form-control" placeholder="Enter your password">
+                            <input type="password" id="password-input" class="form-control"
+                                placeholder="Enter your password">
                             <button class="btn btn-secondary mt-3 verifyChangeAccount">Verify</button>
                         </div>
                     </div>
@@ -170,6 +173,15 @@
                                 <option selected hidden>more options will be added from db</option>
                             </select>
                             <button class="btn btn-secondary mt-3" onclick="closeCardSelect()">Confirm</button>
+                        </div>
+                    </div>
+                    <div id="overlay4" class="overlay3 d-none">
+                        <div class="card">
+                            <span class="close-btn" onclick="closeCardNew()">X</span>
+                            <h2>Please Enter the new bank id</h2>
+                            <input type="text" class="form-control">
+                            <button class="btn btn-secondary mt-3" onclick="closeCardNew()"
+                                onkeypress="return ValidateKey(event)">Confirm</button>
                         </div>
                     </div>
                 </div>
