@@ -106,42 +106,72 @@
                             <tr>
                                 <th scope="row">First name</th>
                                 <td id="firstName" class="field"></td>
-                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db"
+                                        class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Last name</th>
                                 <td id="lastName" class="field"></td>
-                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db"
+                                        class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Email</th>
                                 <td id="email" class="field"></td>
-                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db"
+                                        class="form-control"></td>
                             </tr>
                             <tr>
                                 <th scope="row">Password</th>
                                 <td id="password" class="field"></td>
-                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Bank ID</th>
-                                <td id="BankID" class="field"></td>
-                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Balance</th>
-                                <td id="Balance" class="field"></td>
-                                <td class="input d-none"><input type="text" placeholder="to be changed from db" class="form-control"></td>
+                                <td class="input d-none"><input type="text" placeholder="to be changed from db"
+                                        class="form-control"></td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="wrapEdit d-flex justify-content-center">
-                    <a href="" class="btn btn-secondary" onclick="openCard(event)" id="edit"><i class="fa-solid fa-pen-to-square"
-                        style="color: #ffffff;"></i> Edit</a>
+                        <a href="" class="btn btn-secondary" onclick="openCard(event)" id="edit"><i
+                                class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>   Edit</a>
                     </div>
                     <div class="wrapDone d-flex justify-content-center d-none">
-                        <a href="" class="btn btn-secondary" id="done"><i class="fa-solid fa-square-check" style="color: #ffffff;"></i> Done</a>
+                        <a href="" class="btn btn-secondary" id="done"><i class="fa-solid fa-square-check"
+                                style="color: #ffffff;"></i> Done</a>
+                    </div>
+                    <p class="card-text">Bank account info</p>
+                    <table class="table align-middle table-columns">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Bank ID</th>
+                                <td id="BankID"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Balance</th>
+                                <td id="Balance"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="wrapBankAccount d-flex justify-content-center">
+                        <a href="" class="btn btn-secondary" id="Bank Account Change" onclick="openCardChange(event)"><i class="fa-solid fa-retweet"
+                                style="color: #ffffff;"></i>     Change Bank Account</a>
+                    </div>
+                    <div id="overlay2" class="overlay2 d-none">
+                        <div class="card">
+                            <span class="close-btn" onclick="closeCardChange()">X</span>
+                            <h2>Password Verification</h2>
+                            <input type="password" id="password-input" class="form-control" placeholder="Enter your password">
+                            <button class="btn btn-secondary mt-3 verifyChangeAccount">Verify</button>
                         </div>
+                    </div>
+                    <div id="overlay3" class="overlay3 d-none">
+                        <div class="card">
+                            <span class="close-btn" onclick="closeCardSelect()">X</span>
+                            <h2>Please select your bank account</h2>
+                            <select class="form-select">
+                                <option selected hidden>more options will be added from db</option>
+                            </select>
+                            <button class="btn btn-secondary mt-3" onclick="closeCardSelect()">Confirm</button>
+                        </div>
+                    </div>
                 </div>
 
 

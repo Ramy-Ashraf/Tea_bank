@@ -5,7 +5,9 @@ const fields = document.querySelectorAll('.field')
 const wrapDone = document.querySelector('.wrapDone')
 const wrapEdit = document.querySelector('.wrapEdit')
 const overlay = document.getElementById("overlay")
-
+const overlay2 = document.getElementById("overlay2")
+const overlay3 = document.getElementById("overlay3")
+const verifyChangeAccount= document.querySelector('.verifyChangeAccount')
 Done.addEventListener('click', (e) => {
         e.preventDefault();
         for (const [i, field] of fields.entries()) {
@@ -75,6 +77,7 @@ if (window.sessionStorage.getItem("log") !== null) {
 
 function closeCard() {
         overlay.classList.toggle('d-none')
+        overlay.classList.toggle('d-flex')
         // Enable scrolling
 }
 
@@ -95,3 +98,29 @@ function openCard(e) {
         overlay.classList.toggle('d-flex');
         // Disable scrolling  
 }
+function openCardChange(e){
+        e.preventDefault();
+        overlay2.classList.toggle('d-none')
+        overlay2.classList.toggle('d-flex');
+}
+function closeCardChange() {
+        overlay2.classList.toggle('d-none')
+        overlay2.classList.toggle('d-flex')
+        // Enable scrolling
+}
+function openCardSelect(e){
+        e.preventDefault();
+        overlay3.classList.toggle('d-none')
+        overlay3.classList.toggle('d-flex')   
+}
+
+function closeCardSelect() {
+        overlay3.classList.toggle('d-none')
+        overlay3.classList.toggle('d-flex')
+        // Enable scrolling
+}
+
+verifyChangeAccount.addEventListener('click',()=>{
+        closeCardChange();
+        openCardSelect(event);
+})
