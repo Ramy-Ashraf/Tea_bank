@@ -37,7 +37,7 @@
     color: rgb(39, 39, 39);
 }
 
-.form-control:focus, select:focus{
+.form-control:focus, .select:focus{
     border-color: #3b3b3b4d;
     outline: 0;
     box-shadow: 0 0 0 3px #3b3b3b4d;
